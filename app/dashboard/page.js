@@ -2,6 +2,8 @@ import AddBudgetForm from "../components/AddBudgetForm"
 import AddTransactionForm from "../components/AddTransactionForm"
 import BudgetSummary from "../components/BudgetSummary"
 import { HomeIcon, UserIcon } from "@heroicons/react/24/outline"
+import TransactionItem from "../components/TransactionItem"
+import TransactionTable from "../components/TransactionTable"
 
 
 export default function Page() {
@@ -26,12 +28,15 @@ export default function Page() {
                     <AddBudgetForm />
                     <AddTransactionForm />
                 </div>
+                
                 <h2>Existing Budgets</h2>
                 <div className="budgets">
                     {/* {budgets.map((budget) => (<BudgetProfile key={budget.id} budget={budget} />))} */}
                     <BudgetSummary />
                 </div>
                 
+                <h2>Recent Transactions</h2>
+                <TransactionTable />
 
             </div>
 
