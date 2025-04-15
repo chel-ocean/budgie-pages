@@ -3,7 +3,7 @@ import React from 'react'
 import TransactionItem from './TransactionItem'
 
 // const Table = ({transactions, showBudget = true}) => {
-const Table = () => {
+const TransactionTable = () => {
     const [sortBy, setSortBy] = React.useState("createdAtMostRecent");
 
     // if (sortBy === "nameAsc") {
@@ -92,4 +92,4 @@ const Table = () => {
   )
 }
 
-export default Table
+export default TransactionTable

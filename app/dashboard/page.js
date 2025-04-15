@@ -2,22 +2,25 @@ import AddBudgetForm from "../components/AddBudgetForm"
 import AddTransactionForm from "../components/AddTransactionForm"
 import BudgetSummary from "../components/BudgetSummary"
 import { HomeIcon, UserIcon } from "@heroicons/react/24/outline"
-import TransactionItem from "../components/TransactionItem"
 import TransactionTable from "../components/TransactionTable"
+import Link from "next/link"
 
 
 export default function Page() {
     return (
         <main>
             <div className="flex w-full justify-between">
-                <div className="flex content-center">
-                    <HomeIcon width={30}/>
-                    <span className="text-4xl font-bold">Budgie</span>
+                <div >
+                    <Link href="/dashboard" className="flex items-center text-4xl">
+                        <HomeIcon width={30}/>
+                        <span className="text-4xl font-bold">Budgie</span>
+                    </Link>
                 </div>
-                {/* button for user profile: */}
-                <div className="flex content-center"> 
-                    <UserIcon width={25}/>
-                    <span className="text-3xl font-bold">My Profile</span>
+                <div>
+                    <Link href="/userprofile" className="flex items-center text-4xl">
+                        <UserIcon width={25}/>
+                        <span className="text-3xl font-bold">My Profile</span>
+                    </Link>
                 </div>
             </div>
             
@@ -36,6 +39,7 @@ export default function Page() {
                 </div>
                 
                 <h2>Recent Transactions</h2>
+                <h4>Sort By: </h4>
                 <TransactionTable />
 
             </div>

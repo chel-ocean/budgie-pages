@@ -24,6 +24,14 @@ const AddTransactionForm = () => {
                         placeholder="Enter transaction amount"
                         required />
                 </div>
+                <div className="grid-xs">
+                    <label htmlFor="newTransactionDate">Date</label>
+                    <input 
+                        type="date"
+                        name="newTransactionDate"
+                        id="newTransactionDate"
+                        required />
+                </div>
                 
                 <div className="grid-sm">
                 {/* <div className="grid-sm" hidden={budgets.length === 1}> */}

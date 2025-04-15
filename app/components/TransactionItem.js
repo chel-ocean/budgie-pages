@@ -46,11 +46,11 @@ const TransactionItem = () => {
                 ) : (
                 formatCurrency(transaction.amount)
                 )} */}
-                {formatCurrency(20)}
+                $20
             </td>
             <td>
                 {/* {formatDate(transaction.createdAt)} */}
-                {formatDate(Date.now())}                
+                Placeholder Date            
             </td>
             
             <td>
