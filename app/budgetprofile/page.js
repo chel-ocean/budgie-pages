@@ -4,6 +4,7 @@ import TransactionTable from "../components/TransactionTable";
 import { HomeIcon, UserIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
 import AddChart from "../components/AddChart";
+import ImportPDF from "../components/ImportPDF";
 
 export default function Page() {
     return (
@@ -28,11 +29,15 @@ export default function Page() {
                     {/* {budget.name} */}
                     Budget Name</span> Overview</h1>
                 <div className="flex-lg">
-                    {/* <BudgetProfile budget={budget} showDelete={true} />
-                    <AddTransactionForm budgets={[budget]} /> */}
-                    <BudgetSummary />
+                    <div className="flex-col">
+                        {/* <BudgetProfile budget={budget} showDelete={true} />
+                        <AddTransactionForm budgets={[budget]} /> */}
+                        <BudgetSummary />
+                        <ImportPDF />
+                    </div>
                     <AddTransactionForm />
                 </div>
+                
 
                 {/* {transactions?.length > 0 ? (
                 <div className="grid-md">

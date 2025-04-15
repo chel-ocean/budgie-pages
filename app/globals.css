@@ -88,6 +88,14 @@ h1,
   margin-bottom: 0.5em;
 }
 
+.intro-centered {
+  text-align: center;
+  font-size: var(--fs-600);
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+} 
+
+
 h2,
 .h2 {
   font-size: var(--fs-500);
@@ -105,6 +113,11 @@ small {
 
 p {
   max-width: var(--content);
+}
+
+p,
+.centered {
+  text-align: center;
 }
 
 /* color utils */
@@ -136,6 +149,7 @@ p {
     -webkit-box-shadow 300ms cubic-bezier(0.075, 0.82, 0.165, 1);
   transition: box-shadow 300ms cubic-bezier(0.075, 0.82, 0.165, 1),
     -webkit-box-shadow 300ms cubic-bezier(0.075, 0.82, 0.165, 1);
+  justify-self: center;
 }
 
 :where(a, .btn):focus {
@@ -390,6 +404,27 @@ select {
   gap: var(--space-lg);
 }
 
+.introcol {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-direction: column;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -ms-flex-item-align: center;
+  -ms-grid-row-align: center;
+  align-self: center;
+  -ms-grid-column-align: center;
+  justify-self: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  gap: var(--space-lg);
+}
+
 .intro div {
   display: -ms-grid;
   display: grid;
@@ -402,6 +437,7 @@ select {
   display: grid;
   gap: var(--space-sm);
   max-width: 25ch;
+  justify-self: center;
 }
 
 /* dashboard */

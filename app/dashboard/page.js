@@ -8,7 +8,7 @@ import Link from "next/link"
 
 export default function Page() {
     return (
-        <main>
+        <main className="dashboard">
             <div className="flex w-full justify-between">
                 <div >
                     <Link href="/dashboard" className="flex items-center text-4xl">

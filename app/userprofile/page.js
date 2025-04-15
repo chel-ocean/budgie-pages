@@ -1,9 +1,9 @@
 import Link from "next/link"
-import { HomeIcon } from "@heroicons/react/24/outline"
+import { HomeIcon, TrashIcon, ArrowLeftStartOnRectangleIcon } from "@heroicons/react/24/outline"
 
 export default function Page () {
     return (
-        <main>
+        <main className="dashboard">
             <div className="flex w-full justify-between">
                 <div >
                     <Link href="/dashboard" className="flex items-center text-4xl">
@@ -13,12 +13,15 @@ export default function Page () {
                 </div>
                 {/* button for user profile: */}
                 <div className="flex content-center"> 
-                    
+                    <ArrowLeftStartOnRectangleIcon width={25}/> 
                     <span className="text-3xl font-bold">Logout</span>
                 </div>
             </div>
+            <div>
+                
+            </div>
             <h1>(Name)'s Profile</h1>
-            <div className="intro">
+            <div className="introcol">
                 <div className="form-wrapper">
                     <h2>My Information</h2>
                     <form className="grid-sm">
@@ -50,13 +53,29 @@ export default function Page () {
                                 
                             ></input>
                         </div>
-                        <div className="flex-sm">
-                            <div className="btn">
-                                <button className="">Edit</button>
-                            </div>
-                        </div>
+                        <button type="submit" className="btn">Edit</button>
                     </form>
+
+                    {/* delete account */}
+                    {/* <form  onSubmit={(event) => {
+                        if (!confirm("Delete all user data?")) {
+                            event.preventDefault() // prevents refresh on submit
+                        }
+                    }}>
+                        <button type="submit" className="btn btn--warning">
+                            <span>Delete User</span>
+                            <TrashIcon width={25} />
+                        </button>
+                    </form> */}
                 </div>
+
+                <form>
+                <button type="submit" className="btn btn--warning">
+                        <span>Delete User</span>
+                        <TrashIcon width={25} />
+                    </button>
+                </form>
+                
             </div>
             
             

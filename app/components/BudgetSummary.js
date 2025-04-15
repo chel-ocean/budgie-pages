@@ -3,7 +3,7 @@ import Link from "next/link";
 
 //const BudgetProfile = ({budget, showDelete = false}) => {
 const BudgetSummary = () => {
-    // const {id, name, amount, colour} = BudgetSummary;
+    // const {id, name, amount, color} = BudgetSummary;
     // const spent = calculateSpentByBudget(id);
 
 
